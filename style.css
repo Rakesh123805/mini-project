@@ -1,0 +1,273 @@
+/* Reset some basic elements */
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  padding-top: 80px; /* Ensure enough space for the fixed header */
+  overflow-x: hidden; /* This removes the horizontal scroll bar */
+}
+
+header {
+  background-color: #5B8DBE;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the header stays above all other content */
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Ensure the hero section takes full width */
+.hero {
+  background: url('images/background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  width: 100%;  /* Full width for the hero */
+  overflow: hidden; /* Prevents any overflow */
+}
+
+.hero-content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #5B8DBE;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Container for Flex Layout */
+.container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+background-color: #000; /* Black background */
+padding: 50px;
+color: #fff; /* White text color */
+}
+
+.about-content {
+width: 60%; /* Set width for the content */
+}
+
+.contact-info {
+width: 30%; /* Set width for the contact section */
+}
+
+.contact-info ul {
+list-style: none;
+padding: 0;
+}
+
+.contact-info ul li {
+margin: 10px 0;
+}
+
+.contact-info ul li a {
+text-decoration: none;
+color: #fff;
+display: flex;
+align-items: center;
+}
+
+.contact-info ul li a i {
+font-size: 20px; /* Adjust the size of the icon here */
+margin-right: 10px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.contact-info ul li a:hover {
+color: #1E90FF; /* Change text color on hover */
+}
+
+/* About Us and Contact Us Titles */
+.about-content h2, .contact-info h2 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Ensure full width cover */
+.about-section {
+width: 100%;
+background-color:  #1d4a77;  /* Black background */
+color: #fff;
+padding: 40px 0;
+}
+
+/* Container full width with no background */
+.container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+width: 100%; /* Ensure full width */
+color: #fff;
+padding: 50px;
+background-color: transparent; /* Remove background color from container */
+}
+
+/* Services Section */
+#services {
+background-color: #f0f8ff; /* Light background color for the services section */
+padding: 60px 0;
+text-align: center;
+}
+
+.service-heading {
+font-size: 32px;
+font-weight: bold;
+margin-bottom: 40px;
+color: #333;
+}
+
+.service-cards {
+display: flex;
+justify-content: center; /* Center the cards in the middle */
+flex-wrap: wrap;         /* Allow wrapping for better responsiveness */
+gap: 20px;               /* Spacing between cards */
+max-width: 1200px;
+margin: 0 auto;          /* Center the entire flex container */
+}
+
+.service-card {
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 30px;
+width: 250px;
+text-align: center;
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for hover effect */
+}
+
+.service-card i {
+font-size: 40px;
+color: #5B8DBE; /* Icon color */
+margin-bottom: 20px;
+}
+
+.service-card h3 {
+font-size: 24px;
+color: #333;
+margin-bottom: 10px;
+}
+
+.service-card p {
+font-size: 16px;
+color: #666;
+}
+
+/* Hover Effect */
+.service-card:hover {
+transform: scale(1.05); /* Slight zoom-in on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+
+/* Navigation Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative; /* Necessary for the ::after pseudo-element */
+  padding-bottom: 5px; /* Adds some space for the underline */
+}
+
+/* Hover Effect */
+.nav-links a::after {
+  content: ''; /* No text content, just the line */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #fafbfb; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition for the underline effect */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+
+/* Remove margin and padding from body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the header is flush with the top of the viewport */
+header {
+  margin: 0; /* Remove any extra margin */
+}
+
+/* Remove margin at the top of the hero section */
+.hero {
+  margin-top: 0; /* Ensure there’s no gap between header and hero section */
+}
